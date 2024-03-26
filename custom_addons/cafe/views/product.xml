@@ -1,0 +1,36 @@
+<odoo>
+    <record model="ir.ui.view" id="view_cafe_product_form">
+      <field name="name">cafe.product.form</field>
+      <field name="model">cafe.product</field>
+      <field name="arch" type="xml">
+        <form string="Cafe Product">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="code"/>
+              <field name="image"/>
+            </group>
+            <group>
+              <field name="cost_price"/>
+              <field name="sale_price"/>
+              <field name="gpm" readonly="1"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cafe_product_action">
+      <field name="name">Product</field>
+      <field name="res_model">cafe.product</field>
+      <field name="view_mode">tree,kanban,form</field>
+      <field name="help" type="html">
+          <p class="o_view_noncontent_smiling_face">
+              Create Product
+          </p>
+      </field>
+    </record>
+
+    <menuitem name="Cafe" id="cafe_menu"/>
+    <menuitem name="Product" id="cafe_product_menu" parent="cafe_menu" action="cafe_product_action"/>
+</odoo>
