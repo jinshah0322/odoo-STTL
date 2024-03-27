@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class SaleTaxLine(models.Model):
     _name = 'cafe.sale.tax.line'
+    _description = 'This is TaxLine Model'
 
     tax = fields.Many2one('cafe.tax', string='Tax', required=True)
     base_price = fields.Float(string='Base Price', required=True)

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Product(models.Model):
     _name = 'cafe.product'
+    _description = 'This is Product Model'
 
     name = fields.Char(string='Product Name', required=True)
     code = fields.Char(string='Product Code')

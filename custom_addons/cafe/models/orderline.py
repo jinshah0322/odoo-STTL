@@ -3,6 +3,7 @@ from odoo import fields, models, api
 
 class SaleOrderLine(models.Model):
     _name = 'cafe.sale.order.line'
+    _description = 'This is OrderLine Model'
 
     product = fields.Many2one('cafe.product', string='Product', required=True)
     quantity = fields.Float(string='Quantity', required=True)

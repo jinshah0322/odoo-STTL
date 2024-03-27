@@ -1,0 +1,26 @@
+<odoo>
+    <record model="ir.ui.view" id="tree_cafe_tax_form">
+      <field name="name">tree.cafe.tax.form</field>
+      <field name="model">cafe.tax</field>
+      <field name="arch" type="xml">
+        <tree string="Cafe Tax">
+          <field name="name"/>
+          <field name="code"/>
+          <field name="percent"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cafe_tax_action">
+      <field name="name">Tax</field>
+      <field name="res_model">cafe.tax</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="o_view_noncontent_smiling_face">
+              Create Tax
+          </p>
+      </field>
+    </record>
+
+    <menuitem name="Tax" id="cafe_tax_menu" parent="cafe_menu" action="cafe_tax_action"/>
+</odoo>

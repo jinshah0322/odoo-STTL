@@ -1,6 +1,21 @@
 <odoo>
-    <record model="ir.ui.view" id="view_cafe_product_form">
-      <field name="name">cafe.product.form</field>
+    <record model="ir.ui.view" id="tree_cafe_product_form">
+      <field name="name">tree.cafe.product.form</field>
+      <field name="model">cafe.product</field>
+      <field name="arch" type="xml">
+        <tree string="Cafe Product">
+          <field name="name"/>
+          <field name="code"/>
+          <field name="image"/>
+          <field name="cost_price"/>
+          <field name="sale_price"/>
+          <field name="gpm" readonly="1"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="form_cafe_product_form">
+      <field name="name">form.cafe.product.form</field>
       <field name="model">cafe.product</field>
       <field name="arch" type="xml">
         <form string="Cafe Product">

@@ -3,6 +3,7 @@ from odoo import fields, models, api
 
 class Sale(models.Model):
     _name = 'cafe.sale'
+    _description = 'This is Sales Model'
 
     customer = fields.Many2one('res.partner', string='Customer', required=True, readonly=True, states={'draft': [('readonly', False)]})
     date = fields.Date(string='Date', default=fields.Date.today, readonly=True, states={'draft': [('readonly', False)]})

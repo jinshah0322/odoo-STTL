@@ -9,6 +9,7 @@
     'depends': ['base'],
     'data': [
         'views/product.xml',
+        'views/tax.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
